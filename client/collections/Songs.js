@@ -10,6 +10,7 @@ var Songs = Backbone.Collection.extend({
   },
 
   parse(response) {
+    console.log(response.results);
     return response.results;
   }
 
