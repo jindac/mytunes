@@ -5,8 +5,18 @@ var LibraryView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
-
   },
+  
+  // events: {
+  //   'change': function () {
+  //     debugger;
+  //     this.render();
+  //   },
+  //   'ended': function() {
+  //     debugger;
+  //     this.render();
+  //   }
+  // },
 
   render: function() {
     // to preserve event handlers on child nodes, we must call .detach() on them before overwriting with .html()
@@ -18,6 +28,7 @@ var LibraryView = Backbone.View.extend({
         return new LibraryEntryView({model: song}).render();
       })
     );
-  }
+  },
+
 
 });
